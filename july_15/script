@@ -1,0 +1,99 @@
+
+set term png;
+
+
+
+
+#最初の課題
+
+set xlabel "r_{n-1}";
+set ylabel "r_n";
+unset format;
+unset logscale;
+
+set output "rand1.png";
+plot "rand1" using 1:2;
+
+set output "rand2.png";
+plot "rand2" using 1:2;
+
+set output "rand3.png";
+plot "rand3" using 1:2;
+
+
+
+#n乗の積分の課題
+
+set xlabel "n";
+set ylabel "average";
+unset format;
+unset logscale;
+
+set output "average1.png";
+plot "average1_1" using 1:2, "average1_2" using 1:2, "average1_3" using 1:2, 1/2.0;
+
+set output "average3.png";
+plot "average3_1" using 1:2, "average3_2" using 1:2, "average3_3" using 1:2, 1/4.0;
+
+set output "average5.png";
+plot "average5_1" using 1:2, "average5_2" using 1:2, "average5_3" using 1:2, 1/6.0;
+
+set output "average7.png";
+plot "average7_1" using 1:2, "average7_2" using 1:2, "average7_3" using 1:2, 1/8.0;
+
+set xlabel "n";
+set ylabel "error";
+set format y "%.0e";
+set logscale;
+
+set output "error1.png";
+plot "error1_1" using 1:2, "error1_2" using 1:2, "error1_3" using 1:2, 1/sqrt(x);
+
+set output "error3.png";
+plot "error3_1" using 1:2, "error3_2" using 1:2, "error3_3" using 1:2, 1/sqrt(x);
+
+set output "error5.png"
+plot "error5_1" using 1:2, "error5_2" using 1:2, "error5_3" using 1:2, 1/sqrt(x);
+
+set output "error7.png"
+plot "error7_1" using 1:2, "error7_2" using 1:2, "error7_3" using 1:2, 1/sqrt(x);
+
+
+
+
+#n次元球
+
+set xlabel "n";
+set ylabel "average";
+unset format;
+unset logscale;
+
+set output "3Dsphere.png";
+plot "3Dsphere" using 1:2, (4/3.0)*pi;
+
+set output "4Dsphere.png";
+plot "4Dsphere" using 1:2, (1/2.0)*pi**2;
+
+set output "5Dsphere.png";
+plot "5Dsphere" using 1:2, (8/15.0)*pi**2;
+
+set output "6Dsphere.png";
+plot "6Dsphere" using 1:2, (1/6.0)*pi**3;
+
+set xlabel "n";
+set ylabel "error";
+set format y "%.0e";
+set logscale;
+
+set output "error_3Dsphere.png";
+plot "error_3Dsphere" using 1:2, 1/sqrt(x);
+
+set output "error_4Dsphere.png";
+plot "error_4Dsphere" using 1:2, 1/sqrt(x);
+
+set output "error_5Dsphere.png";
+plot "error_5Dsphere" using 1:2, 1/sqrt(x);
+
+set output "error_6Dsphere.png";
+plot "error_6Dsphere" using 1:2, 1/sqrt(x);
+

@@ -1,0 +1,12 @@
+set term png;
+set xlabel "m";
+set ylabel "S";
+
+set output "data-aS.png";
+plot "data-aS" u 1:2;
+
+set output "data-bS.png";
+plot "data-bS" u 1:2;
+
+set output "data-cS.png";
+plot "data-cS" u 1:2;
